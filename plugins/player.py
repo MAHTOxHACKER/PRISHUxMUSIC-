@@ -911,7 +911,7 @@ async def yt_play_list(client, m: Message):
         await mp.start_call()
     if m.reply_to_message is not None and m.reply_to_message.document:
         if m.reply_to_message.document.file_name != "YouTube_PlayList.json":
-            k=await m.reply("Invalid PlayList file given. Use @GetPlayListBot to get a playlist file.")
+            k=await m.reply("Invalid PlayList file given. Use @PRISHUMUSICBOT to get a playlist file.")
             await mp.delete(k)
             return
         ytplaylist=await m.reply_to_message.download()
@@ -1006,22 +1006,22 @@ async def yt_play_list(client, m: Message):
                 markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🤖 GetPlayListBot", url=f"https://telegram.me/GetPlaylistBot?start=subinps_{m.from_user.id}")
+                            InlineKeyboardButton("🤖 PRISHUMUSICBOT", url=f"https://telegram.me/PRISHUMUSICBOT?start=subinps_{m.from_user.id}")
 
                         ]
                     ]
                     )
-                k=await m.reply("I was unable to fetch data for you. Plase send /start to @GetPlayListBot and try again.", reply_markup=markup)
+                k=await m.reply("I was unable to fetch data for you. Plase send /start to @PRISHUMUSICBOT and try again.", reply_markup=markup)
                 await mp.delete(k)
                 return
             elif ytplaylist == "nosub":
                 markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📢 Join My Update Channel", url='https://t.me/subin_works')
+                            InlineKeyboardButton("📢 Join My Update Channel", url='https://t.me/RBGOFFICIAL1')
                         ],
                         [
-                            InlineKeyboardButton("🔄 Try Again", url=f"https://telegram.me/GetPlaylistBot?start=subinps_{m.from_user.id}")
+                            InlineKeyboardButton("🔄 Try Again", url=f"https://telegram.me/PRISHUMUSICBOT?start=subinps_{m.from_user.id}")
 
                         ]
                     ]
@@ -1030,7 +1030,7 @@ async def yt_play_list(client, m: Message):
                 await mp.delete(k)
                 return
             elif ytplaylist == "kicked":
-                k=await m.reply("You are banned to use this feature.\nTry @GetPlayListBot")
+                k=await m.reply("You are banned to use this feature.\nTry @PRISHUMUSICBOT")
                 await mp.delete(k)
                 return
             elif ytplaylist == "urlinvalid":
@@ -1038,7 +1038,7 @@ async def yt_play_list(client, m: Message):
                 await mp.delete(k)
                 return
             elif ytplaylist == "timeout":
-                k=await m.reply("I was unable to get data within time. Try to get the playlist data from @GetPlaylIstBot")
+                k=await m.reply("I was unable to get data within time. Try to get the playlist data from @PRISHUMUSICBOT")
                 await mp.delete(k)
                 return
             elif "Error" in ytplaylist:
@@ -1123,7 +1123,7 @@ async def yt_play_list(client, m: Message):
                     k=await m.reply_text(pl, disable_web_page_preview=True)
                     await mp.delete(k)
         else:
-            k=await m.reply("Reply to a Playlist File Or Pass A YouTube Playlist Url along command.\nUse @GetPlayListBot To Get A PlayList File")
+            k=await m.reply("Reply to a Playlist File Or Pass A YouTube Playlist Url along command.\nUse @PRISHUMUSICBOT To Get A PlayList File")
             await mp.delete(k)
             await mp.delete(m)
 
@@ -1138,7 +1138,7 @@ async def export_play_list(client, message: Message):
     file=f"{message.chat.id}_{message.message_id}.json"
     with open(file, 'w+') as outfile:
         json.dump(playlist, outfile, indent=4)
-    await client.send_document(chat_id=message.chat.id, document=file, file_name="PlayList.json", caption=f"Playlist\n\nNumber Of Songs: <code>{len(playlist)}</code>\n\nJoin [Jos Projects](https://t.me/josprojects/131)")
+    await client.send_document(chat_id=message.chat.id, document=file, file_name="PlayList.json", caption=f"Playlist\n\nNumber Of Songs: <code>{len(playlist)}</code>\n\nJoin [RBG OFFICIAL](https://t.me/RBGOFFICIAL1)")
     await mp.delete(message)
     try:
         os.remove(file)
@@ -1152,7 +1152,7 @@ async def import_play_list(client, m: Message):
         await mp.start_call()
     if m.reply_to_message is not None and m.reply_to_message.document:
         if m.reply_to_message.document.file_name != "PlayList.json":
-            k=await m.reply("Invalid PlayList file given. Use @GetPlayListBot to get a playlist file. Or Export your current Playlist using /export.")
+            k=await m.reply("Invalid PlayList file given. Use @PRISHUMUSICBOT to get a playlist file. Or Export your current Playlist using /export.")
             await mp.delete(k)
             await mp.delete(m)
             return
@@ -1313,15 +1313,15 @@ allcmd = ["play", "player", "splay", f"splay@{U}", f"play@{U}", f"player@{U}"] +
 async def not_chat(_, m: Message):
     buttons = [
         [
-            InlineKeyboardButton('🔺 Heroku', url='https://youtu.be/FKaAU4Pr2bw'),
-            InlineKeyboardButton('Qovery 🔺', url='https://youtu.be/KC4YdpDGQKg'),
+            InlineKeyboardButton('🔺 Music Masti', url='https://t.me/+6D-WDcNId-IxNTll'),
+            InlineKeyboardButton('Music Masti 🔺', url='https://t.me/+6D-WDcNId-IxNTll'),
         ],
         [
             InlineKeyboardButton('🆘 Help & Commands 🆘', callback_data='help'),       
         ],
         [
-            InlineKeyboardButton('👨‍💻 Developer', url='https://t.me/c/ZauteKm/580'),
-            InlineKeyboardButton('Channel 📢', url='https://t.me/c/josprojects/131')
+            InlineKeyboardButton('👨‍💻 Developer', url='https://t.me/NOBiTA_FIREX'),
+            InlineKeyboardButton('Channel 📢', url='http://t.me/+UrYcohMnsc1jYTI1')
         ]
         ]
     k=await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [SOURCE CODE](https://github.com/ZauteKm/MusicPlayer) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
