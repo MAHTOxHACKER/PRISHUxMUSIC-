@@ -64,11 +64,11 @@ HELP = """
 async def start(client, message):
     buttons = [
         [
-        InlineKeyboardButton("🔥 Source Code 🔥", url='https://github.com/ZauteKm/MusicPlayer'),
+        InlineKeyboardButton("🔥 Source Code 🔥", url='https://t.me/RBGOFFICIAL1'),
     ],
     [
-        InlineKeyboardButton('👥 Group', url='https://t.me/iZaute/5'),
-        InlineKeyboardButton('Channel 📢', url='https://t.me/iZaute/6'),
+        InlineKeyboardButton('👥 Group', url='https://t.me/RBGOFFICIAL1'),
+        InlineKeyboardButton('Channel 📢', url='http://t.me/+UrYcohMnsc1jYTI1'),
     ],
     [
         InlineKeyboardButton('🆘 Help & Commands 🆘', callback_data='help'),
@@ -86,14 +86,14 @@ async def start(client, message):
 async def show_help(client, message):
     buttons = [
         [
-            InlineKeyboardButton("🔥 Source Code 🔥", url='https://github.com/ZauteKm/MusicPlayer'),
+            InlineKeyboardButton("🔥 Source Code 🔥", url='https://t.me/RBGOFFICIAL1'),
         ],
         [
-            InlineKeyboardButton('👥 Group', url='https://t.me/iZaute/5'),
-            InlineKeyboardButton('Channel 📢', url='https://t.me/iZaute/6'),
+            InlineKeyboardButton('👥 Group', url='https://t.me/RBGOFFICIAL1'),
+            InlineKeyboardButton('Channel 📢', url='http://t.me/+UrYcohMnsc1jYTI1'),
         ],
         [
-            InlineKeyboardButton('🔰 How to Deploy 🔰', url='https://t.me/c/josprojects/131'),
+            InlineKeyboardButton('🔰 How to Deploy 🔰', url='https://t.me/RBGOFFICIAL1'),
         
         ]
     ]
